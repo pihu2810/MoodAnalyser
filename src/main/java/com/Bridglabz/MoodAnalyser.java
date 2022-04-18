@@ -2,14 +2,21 @@ package com.Bridglabz;
 
 public class MoodAnalyser 
 {
-	public String analyseMood(String message) {
-
-		if (message.contains("sad")) {
-			return "Sad";
-		}
-		else {
-			return "Happy";
-		}
-
+	private String message;
+	public MoodAnalyser() {
+		
 	}
+	public MoodAnalyser(String message) {
+		this.message=message;
+	}
+	public String analyseMood() {
+        try {
+            if (message.contains("SAD"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch(Exception e) {
+            return "happy";
+        }
+    }
 }
